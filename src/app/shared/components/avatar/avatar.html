@@ -1,0 +1,29 @@
+<!-- Avatar y datos (solo desktop) -->
+<div class="hidden md:flex items-center gap-3 px-2">
+    <div class="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center border-2 border-white shadow-md">
+        <span class="text-white text-sm font-semibold">A</span>
+    </div>
+    <div class="flex-1 min-w-0">
+        <p class="text-gray-900 text-sm font-semibold truncate">Admin</p>
+        <p class="text-gray-500 text-xs truncate">admin@ventapro.com</p>
+    </div>
+    <button mat-icon-button class="w-8 h-8 flex items-center justify-center" [matMenuTriggerFor]="userMenu">
+        <mat-icon class="text-gray-400 text-lg">more_vert</mat-icon>
+    </button>
+</div>
+
+<!-- Solo botón de menú (solo mobile) -->
+<button mat-icon-button class="md:hidden w-8 h-8 flex items-center justify-center" [matMenuTriggerFor]="userMenu">
+    <mat-icon class="text-gray-400 text-lg">more_vert</mat-icon>
+</button>
+
+<mat-menu #userMenu="matMenu">
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Configuración</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span>Cerrar Sesión</span>
+    </button>
+</mat-menu>

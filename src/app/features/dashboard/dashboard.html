@@ -9,19 +9,7 @@
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       @for (stat of stats; track stat.title) {
-        <mat-card class="relative overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full -mr-16 -mt-16"></div>
-          <mat-card-content class="p-6 relative z-10">
-            <div class="flex items-center justify-between mb-4">
-              <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg">
-                {{ stat.icon }}
-              </div>
-              <mat-icon class="text-gray-300">trending_up</mat-icon>
-            </div>
-            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">{{ stat.title }}</h3>
-            <p class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{{ stat.value }}</p>
-          </mat-card-content>
-        </mat-card>
+        <app-board-card [icon]="stat.icon" [title]="stat.title" [value]="stat.value" />
       }
     </div>
 

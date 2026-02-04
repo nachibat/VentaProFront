@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { BoardCard } from '../../shared/components/board-card/board-card';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MatCardModule, MatIconModule],
+  imports: [MatCardModule, MatIconModule, BoardCard],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

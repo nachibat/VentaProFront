@@ -2,13 +2,11 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTooltip } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar',
-    imports: [RouterModule, MatIconModule, MatListModule, MatTooltip, MatMenuModule, MatButtonModule],
+    imports: [RouterModule, MatIconModule, MatListModule, MatButtonModule],
     templateUrl: './sidebar.html',
     styleUrl: './sidebar.css',
 })
