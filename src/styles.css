@@ -1,3 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+/* Estilos globales para mat-flat-button */
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button {
+    border-radius: 8px !important;
+}
+
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
+    border-radius: 10px !important;
+}
+
+/* Color de texto más claro para mat-input */
+.mat-mdc-input-element {
+    color: #6b7280 !important;
+}
+
+/* Color del placeholder */
+.mat-mdc-input-element::placeholder {
+    color: #9ca3af !important;
+}
+
+/* Color del label flotante */
+.mat-mdc-form-field-label {
+    color: #6b7280 !important;
+}
+
+/* Color del borde del mat-form-field */
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--focused) .mdc-notched-outline__leading,
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--focused) .mdc-notched-outline__notch,
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--focused) .mdc-notched-outline__trailing {
+    border-color: #9ca3af !important;
+}
+
+/* Borde en hover */
+.mat-mdc-text-field-wrapper:hover:not(.mdc-text-field--focused) .mdc-notched-outline__leading,
+.mat-mdc-text-field-wrapper:hover:not(.mdc-text-field--focused) .mdc-notched-outline__notch,
+.mat-mdc-text-field-wrapper:hover:not(.mdc-text-field--focused) .mdc-notched-outline__trailing {
+    border-color: #9ca3af !important;
+}
+
+/* Color del label flotante */
+.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+    color: #6b7280 !important;
+}
+
+/* Iconos prefix y suffix en form fields */
+.mat-mdc-form-field-icon-prefix mat-icon,
+.mat-mdc-form-field-icon-suffix mat-icon {
+    color: #9ca3af !important;
+}
+
+/* Bordes redondeados para mat-form-field */
+.mat-mdc-text-field-wrapper {
+    border-radius: 12px !important;
+}
+
+.mdc-notched-outline__leading {
+    border-radius: 12px 0 0 12px !important;
+}
+
+.mdc-notched-outline__trailing {
+    border-radius: 0 12px 12px 0 !important;
+}
+
+/* Eliminar borde del matPrefix */
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch {
+    border-left: none !important;
+}

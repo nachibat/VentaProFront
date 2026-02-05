@@ -1,1 +1,67 @@
-<p>login works!</p>
+<div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-6">
+    <div class="w-full max-w-md">
+        
+
+        <!-- Login Card -->
+        <mat-card class="shadow-xl overflow-hidden !bg-white/95 backdrop-blur-sm">
+            <mat-card-header class="justify-center">
+                <!-- Logo/Header -->
+                <div class="text-center mb-8 mt-4">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-3xl shadow-lg mb-4">
+                        🚀
+                    </div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-2">VentaPro</h1>
+                    <p class="text-gray-600">Inicia sesión en tu cuenta</p>
+                </div>
+            </mat-card-header>
+            <mat-card-content class="p-8">
+                <form class="space-y-6" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                    <!-- Usuario -->
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Usuario</mat-label>
+                        <mat-icon matPrefix class="mr-2 text-gray-400">person</mat-icon>
+                        <input matInput type="text" placeholder="Ingresa tu usuario" formControlName="username">
+                        @if (loginForm.get('username')?.hasError('required') && loginForm.get('username')?.touched) {
+                            <mat-error>El usuario es requerido</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <!-- Contraseña -->
+                    <mat-form-field appearance="outline" class="w-full">
+                        <mat-label>Contraseña</mat-label>
+                        <mat-icon matPrefix class="mr-2 text-gray-400">lock</mat-icon>
+                        <input matInput [type]="hidePassword() ? 'password' : 'text'" placeholder="Ingresa tu contraseña" formControlName="password">
+                        <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()">
+                            <mat-icon>{{ hidePassword() ? 'visibility_off' : 'visibility' }}</mat-icon>
+                        </button>
+                        @if (loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched) {
+                            <mat-error>La contraseña es requerida</mat-error>
+                        }
+                        @if (loginForm.get('password')?.hasError('minlength')) {
+                            <mat-error>Mínimo 6 caracteres</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <!-- Remember & Forgot -->
+                    <div class="flex items-center justify-between -mt-2">
+                        <mat-checkbox color="primary" formControlName="rememberMe" class="text-sm">Recordarme</mat-checkbox>
+                        <a class="disabled font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button mat-flat-button color="primary" type="submit" class="w-full py-3 text-base font-semibold bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+                        Iniciar Sesión
+                    </button>
+                </form>
+
+            </mat-card-content>
+        </mat-card>
+
+        <!-- Footer -->
+        <p class="text-center text-sm text-gray-500 mt-8">
+            © 2026 VentaPro. Todos los derechos reservados.
+        </p>
+    </div>
+</div>
