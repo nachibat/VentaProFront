@@ -6,7 +6,7 @@
 }
 
 .active-link {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%) !important;
     
     mat-icon {
         color: white !important;
@@ -16,4 +16,8 @@
         color: white !important;
         font-weight: 600;
     }
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%) !important;
 }

@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #253e63;
+    --primary-color-dark: color-mix(in srgb, var(--primary-color) 80%, black);
+    --secondary-color: #1dc825;
+}
 
 @import "tailwindcss";
 
@@ -10,6 +15,7 @@
 
 .mat-mdc-raised-button.mat-primary,
 .mat-mdc-unelevated-button.mat-primary {
+    background-color: var(--primary-color) !important;
     border-radius: 10px !important;
 }
 

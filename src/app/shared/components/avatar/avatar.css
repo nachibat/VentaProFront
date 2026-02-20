@@ -1,0 +1,7 @@
+.bg-primary-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%) !important;
+}
+
+.text-primary {
+    color: var(--secondary-color) !important;
+}
